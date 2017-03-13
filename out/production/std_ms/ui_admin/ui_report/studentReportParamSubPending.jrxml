@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0ab64ccb-6939-4270-82a8-5432cc80cb07">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="4"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="studentms"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="sub_name" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="std_gender" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     tbl_student."std_id" AS tbl_student_std_id,
+     tbl_student."std_full_name" AS tbl_student_std_full_name,
+     tbl_student."std_gender" AS tbl_student_std_gender,
+     tbl_student."std_sub_id" AS tbl_student_std_sub_id,
+     tbl_student."std_email" AS tbl_student_std_email,
+     tbl_student."std_password" AS tbl_student_std_password,
+     tbl_student."ispaid" AS tbl_student_ispaid,
+     tbl_subject."sub_id" AS tbl_subject_sub_id,
+     tbl_subject."sub_name" AS tbl_subject_sub_name
+FROM
+     "public"."tbl_subject" tbl_subject INNER JOIN "public"."tbl_student" tbl_student ON tbl_subject."sub_id" = tbl_student."std_sub_id"
+WHERE 
+	    tbl_student."ispaid" = FALSE
+AND
+	tbl_student."std_gender" LIKE '%'||'$P!{std_gender}'||'%'	
+AND
+	tbl_subject."sub_name" LIKE '%'||'$P!{sub_name}'||'%']]>
+	</queryString>
+	<field name="tbl_student_std_id" class="java.lang.Integer"/>
+	<field name="tbl_student_std_full_name" class="java.lang.String"/>
+	<field name="tbl_student_std_gender" class="java.lang.String"/>
+	<field name="tbl_student_std_sub_id" class="java.lang.Integer"/>
+	<field name="tbl_student_std_email" class="java.lang.String"/>
+	<field name="tbl_student_std_password" class="java.lang.String"/>
+	<field name="tbl_student_ispaid" class="java.lang.Boolean"/>
+	<field name="tbl_subject_sub_id" class="java.lang.Integer"/>
+	<field name="tbl_subject_sub_name" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="544" height="30" backcolor="#CCFFFF" uuid="357eed2e-81a4-4b07-afb9-63e8dc044ca5"/>
+				<textElement textAlignment="Center" markup="styled">
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[TOTAL STUDENT IN SPECIFIC SUBJECT]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="47" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="0" y="0" width="200" height="20" uuid="8392749a-fd1e-48ab-beec-c9dbdac4003e"/>
+				<text><![CDATA[Hogwarts School of Witchcraft and Wizardry]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="460" y="0" width="100" height="20" uuid="65fd6d0c-1e64-4f1e-8bdc-93b94742cc30"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="20" width="120" height="20" uuid="7c639c65-71b7-4f27-ad1a-e616dc0cb314"/>
+				<text><![CDATA[Phnom Penh headquarter]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="423" y="0" width="37" height="20" uuid="7a607ce5-9425-4c95-8fb2-5af563807cc0"/>
+				<text><![CDATA[Date :]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" backcolor="#0FEFFF" uuid="134db010-fc1b-46bb-a38f-f8909a579676"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="-1" width="100" height="30" backcolor="#0FEFFF" uuid="2dc33ecd-a5c6-4125-93cd-8c9ab3f89ad7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Full Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="-1" width="100" height="30" backcolor="#0FEFFF" uuid="f96ec179-8755-455e-9706-ff1004f04ab7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="-1" width="100" height="30" backcolor="#0FEFFF" uuid="5f6b025b-568f-44f3-9cc0-b3680071f80c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Subject]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="" x="400" y="-1" width="145" height="30" backcolor="#FCFCFC" uuid="3bb01a1d-bb72-4913-bbcb-6c7d863f7aea"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[E-Mail]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="100" height="19" backcolor="#D1D1D1" uuid="08986d7b-98db-47b2-8bc4-1e8eac12dfbd"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tbl_student_std_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="100" y="0" width="100" height="19" backcolor="#FFFFFF" uuid="85c1db06-c974-4417-86e0-2714b35abfae"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tbl_student_std_full_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="200" y="0" width="100" height="19" backcolor="#FFFFFF" uuid="f4f54517-2052-4dd1-ab3b-d63cf19cde40"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tbl_student_std_gender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="300" y="0" width="100" height="19" backcolor="#FFFFFF" uuid="7c9e6b75-91cd-4f6a-98e9-4812f6bd2f9d"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tbl_subject_sub_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="400" y="0" width="144" height="19" backcolor="#FFFFFF" uuid="e96048c7-410f-4e93-aac1-c2da321245b1"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tbl_student_std_email}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="28" splitType="Stretch">
+			<textField>
+				<reportElement x="435" y="4" width="80" height="20" uuid="4edf451d-0ce9-477d-a3bb-206af096cc03"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="515" y="3" width="40" height="20" uuid="7a92d489-351d-43f6-ab00-a8302e5b5e70"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="126" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="408" y="66" width="95" height="21" uuid="10cf8753-5855-44e4-a548-847900ab8038"/>
+				<text><![CDATA[See and Approve]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="408" y="87" width="109" height="21" uuid="1396fecb-68cd-4ba0-9d7b-a66f8e34d5a7"/>
+				<text><![CDATA[Prof. Albus Dumbledore]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

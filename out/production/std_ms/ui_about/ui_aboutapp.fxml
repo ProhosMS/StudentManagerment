@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.60" fx:controller="ui_about.AboutAppController">
+   <children>
+      <ImageView fitHeight="192.0" fitWidth="223.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/immortals-2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="148.0" fitWidth="376.0" layoutX="453.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/logo_IntelliJIDEA.png" />
+         </image>
+      </ImageView>
+      <TextArea editable="false" layoutX="82.0" layoutY="184.0" prefHeight="528.0" prefWidth="636.0" text="Immortal Dev - Som Rithprohos&#10;&#10;made with &lt;3 for study purpose&#10;&#10;Date: 20/12/2016&#10;Product Version : 1.0.0&#10;Java Version - 1.8.0&#10;&#10;This App was build with:&#10;Java &amp; JavaFx&#10;IntelliJ IDEA - IDE&#10;JavaFX scene Builder  - GUI&#10;ControlFX - Lib&#10;jfoenix - Lib&#10;PostgreSQL - Database&#10;Jasper Studio - Report&#10;&#10;Copyright (c) 2016 - Immortal Dev&#10;" wrapText="true">
+         <font>
+            <Font name="Segoe UI Semibold" size="18.0" />
+         </font>
+      </TextArea>
+      <ImageView fitHeight="114.0" fitWidth="116.0" layoutX="362.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/SceneBuilderLogo-300x300@2x.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

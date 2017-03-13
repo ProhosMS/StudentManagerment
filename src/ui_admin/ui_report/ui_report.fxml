@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="823.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui_admin.ui_report.ReportController">
+   <children>
+      <PieChart fx:id="chartSubject" layoutX="14.0" layoutY="386.0" prefHeight="400.0" prefWidth="482.0" startAngle="90.0" style="-fx-border-color: #03A9F4;" title="SUBJECT STUDY" />
+      <PieChart fx:id="chartGender" layoutX="505.0" layoutY="386.0" prefHeight="400.0" prefWidth="482.0" startAngle="90.0" style="-fx-border-color: #03A9F4;" title="GENDER" />
+      <Label contentDisplay="TOP" layoutX="430.0" layoutY="34.0" prefHeight="137.0" prefWidth="150.0" text="Report" textAlignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="202.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icon/report.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb1" alignment="CENTER" layoutX="16.0" layoutY="804.0" prefHeight="23.0" prefWidth="482.0" text="Data" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb2" alignment="CENTER" layoutX="505.0" layoutY="804.0" prefHeight="23.0" prefWidth="482.0" text="Data">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnShowReport" buttonType="RAISED" disable="true" layoutX="855.0" layoutY="293.0" onAction="#clickShowReport" prefHeight="48.0" prefWidth="132.0" styleClass="button-md-blue" stylesheets="@../../stylesheet/main.css" text="SHOW REPORT">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="cbSubject" disable="true" layoutX="575.0" layoutY="293.0" prefHeight="48.0" prefWidth="224.0" promptText="SUBJECT" styleClass="button-md-blue" stylesheets="@../../stylesheet/main.css" />
+      <JFXComboBox fx:id="cbReportType" layoutX="14.0" layoutY="293.0" onAction="#clickCbReportType" prefHeight="48.0" prefWidth="224.0" promptText="REPORT TYPE" styleClass="button-md-blue" stylesheets="@../../stylesheet/main.css" />
+      <JFXComboBox fx:id="cbGender" disable="true" layoutX="300.0" layoutY="293.0" prefHeight="48.0" prefWidth="224.0" promptText="GENDER" styleClass="button-md-blue" stylesheets="@../../stylesheet/main.css" />
+   </children>
+</AnchorPane>

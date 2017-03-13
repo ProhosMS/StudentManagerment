@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1000.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.60" fx:controller="ui_admin.ui_setting.SettingController">
+   <children>
+      <Label contentDisplay="TOP" layoutX="425.0" layoutY="14.0" prefHeight="137.0" prefWidth="150.0" text="Settings" textAlignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="202.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icon/Settings.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <ListView fx:id="listSetting" layoutX="14.0" layoutY="222.0" prefHeight="556.0" prefWidth="200.0" />
+      <Pane fx:id="paneUserProfile" layoutX="217.0" layoutY="222.0" prefHeight="556.0" prefWidth="768.0" style="-fx-border-color: #03A9F4;">
+         <children>
+            <JFXTextField fx:id="txtEmail" editable="false" focusColor="#03a9f4" focusTraversable="false" labelFloat="true" layoutX="228.0" layoutY="90.0" maxWidth="312.0" minWidth="312.0" prefHeight="39.0" prefWidth="312.0" promptText="Email">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </JFXTextField>
+            <Hyperlink fx:id="btnEdit" layoutX="549.0" layoutY="95.0" onAction="#clickEdit" text="Edit" />
+            <Hyperlink fx:id="btnSave" disable="true" layoutX="600.0" layoutY="95.0" onAction="#clickSave" text="Save" />
+            <JFXButton fx:id="btnChangePassword" buttonType="RAISED" layoutX="228.0" layoutY="167.0" onAction="#clickChangePassword" prefHeight="31.0" prefWidth="312.0" styleClass="button-md-blue" stylesheets="@../../stylesheet/main.css" text="Change Password" />
+            <Pane fx:id="paneChangePassword" layoutX="183.0" layoutY="228.0" prefHeight="308.0" prefWidth="412.0" style="-fx-border-color: #03A9F4;" visible="false">
+               <children>
+                  <JFXPasswordField fx:id="txtCurrentPwPane" focusColor="#03a9f4" labelFloat="true" layoutX="62.0" layoutY="41.0" maxWidth="289.0" minWidth="254.0" prefHeight="37.0" prefWidth="289.0" promptText="Current">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXPasswordField fx:id="txtNewPwPane" focusColor="#03a9f4" labelFloat="true" layoutX="62.0" layoutY="104.0" maxWidth="289.0" minWidth="254.0" prefHeight="37.0" prefWidth="289.0" promptText="New">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXPasswordField fx:id="txtReNewPwPane" focusColor="#03a9f4" labelFloat="true" layoutX="62.0" layoutY="169.0" maxWidth="289.0" minWidth="254.0" prefHeight="37.0" prefWidth="289.0" promptText="Re-Type New">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXButton fx:id="btnSavePwPane" buttonType="RAISED" layoutX="62.0" layoutY="223.0" onAction="#clickSaveChangesPwPane" prefHeight="31.0" prefWidth="289.0" styleClass="button-md-blue" stylesheets="@../../stylesheet/main.css" text="Save Changes" />
+                  <Hyperlink fx:id="btnCancelPwPane" layoutX="180.0" layoutY="268.0" onAction="#clickCancelPwPane" text="Cancel" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

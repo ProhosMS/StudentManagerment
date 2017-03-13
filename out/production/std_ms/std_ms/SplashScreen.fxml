@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootpane" prefHeight="472.0" prefWidth="449.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="std_ms.SplashScreenController">
+   <children>
+      <ImageView fitHeight="540.0" fitWidth="528.0" layoutX="-7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/splashscreen.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="91.0" layoutY="32.0" prefHeight="103.0" prefWidth="339.0" text="Welcome to School System">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="190.0" layoutY="352.0" prefHeight="103.0" prefWidth="142.0" text="Loading....">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="379.0" layoutY="455.0" prefHeight="72.0" prefWidth="142.0" text="By Som Rithprohos">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelVersion" layoutX="14.0" layoutY="455.0" prefHeight="72.0" prefWidth="212.0" text="Version">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

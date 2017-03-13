@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../Java Lib/controlsfx-8.40.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Java Lib/jfoenix.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Java Lib/postgresql-9.4.1212.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../iReport-5.6.0-plugin/iReport-5.6.0-plugin/Lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../../iReport-5.6.0-plugin/iReport-5.6.0-plugin/Lib" recursive="false" />
+  </library>
+</component>

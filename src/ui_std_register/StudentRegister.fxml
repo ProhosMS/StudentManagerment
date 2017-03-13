@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootpane" prefHeight="800.0" prefWidth="1000.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui_std_register.StudentRegisterController">
+    <stylesheets>
+        <URL value="@studentregister.css" />
+    </stylesheets>
+   <children>
+      <JFXComboBox fx:id="cbSubject" layoutX="498.0" layoutY="422.0" onAction="#subjectSelected" prefHeight="45.0" prefWidth="340.0" promptText="Choose Subject" style="-fx-background-color: #03A9F4;" AnchorPane.bottomAnchor="333.0" AnchorPane.rightAnchor="162.0" />
+      <Label fx:id="labelVersion" layoutX="14.0" layoutY="765.0" prefHeight="21.0" prefWidth="194.0" text="Version" AnchorPane.bottomAnchor="14.0" />
+      <Label layoutX="373.0" layoutY="232.0" text="Registeration" AnchorPane.bottomAnchor="523.0" AnchorPane.leftAnchor="373.0" AnchorPane.rightAnchor="406.0" AnchorPane.topAnchor="232.0">
+         <font>
+            <Font name="Sitka Heading" size="40.0" />
+         </font></Label>
+      <JFXTextField fx:id="txtFirstName" focusColor="#03a9f4" labelFloat="true" layoutX="139.0" layoutY="336.0" maxWidth="340.0" minWidth="264.0" prefHeight="45.0" prefWidth="340.0" promptText="First Name" AnchorPane.bottomAnchor="419.0" AnchorPane.leftAnchor="148.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtLastName" focusColor="#03a9f4" labelFloat="true" layoutX="498.0" layoutY="336.0" maxWidth="340.0" minWidth="264.0" prefHeight="45.0" prefWidth="340.0" promptText="Last Name" AnchorPane.bottomAnchor="419.0" AnchorPane.rightAnchor="162.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cbGender" layoutX="148.0" layoutY="422.0" onAction="#makeSelect" prefHeight="45.0" prefWidth="255.0" promptText="Choose Gender" style="-fx-background-color: #03A9F4;" AnchorPane.bottomAnchor="333.0" AnchorPane.leftAnchor="148.0" />
+      <ImageView fx:id="imgView" fitHeight="61.0" fitWidth="68.0" layoutX="416.0" layoutY="416.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="323.0" />
+      <JFXTextField fx:id="txtEmail" focusColor="#03a9f4" labelFloat="true" layoutX="142.0" layoutY="522.0" maxWidth="340.0" minWidth="264.0" onKeyReleased="#typeInEmail" prefHeight="45.0" prefWidth="340.0" promptText="Email" AnchorPane.bottomAnchor="233.0" AnchorPane.leftAnchor="148.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txtPassword" labelFloat="true" layoutX="500.0" layoutY="522.0" maxWidth="340.0" minWidth="340.0" prefHeight="45.0" prefWidth="340.0" promptText="Password" AnchorPane.bottomAnchor="233.0" AnchorPane.rightAnchor="162.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXPasswordField fx:id="txtRePassword" labelFloat="true" layoutX="500.0" layoutY="600.0" maxWidth="340.0" minWidth="340.0" prefHeight="45.0" prefWidth="340.0" promptText="Re-Password" AnchorPane.bottomAnchor="155.0" AnchorPane.rightAnchor="162.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton fx:id="btnReg" layoutX="509.0" layoutY="679.0" onAction="#makeRegister" prefHeight="37.0" prefWidth="340.0" styleClass="button-md-blue" stylesheets="@../stylesheet/main.css" text="Register" AnchorPane.bottomAnchor="84.0" AnchorPane.rightAnchor="162.0">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <ImageView fx:id="imgView1" fitHeight="61.0" fitWidth="68.0" layoutX="853.0" layoutY="416.0" pickOnBounds="true" preserveRatio="true" />
+      <HBox layoutX="85.0" layoutY="14.0" prefHeight="182.0" prefWidth="792.0" spacing="150.0">
+         <children>
+            <ImageView fitHeight="185.0" fitWidth="182.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/pencil.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="185.0" fitWidth="182.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/register.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="185.0" fitWidth="182.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/building.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <JFXTextField fx:id="txtPhone" focusColor="#03a9f4" labelFloat="true" layoutX="144.0" layoutY="600.0" maxWidth="340.0" minWidth="264.0" onKeyReleased="#typeOfPhone" prefHeight="45.0" prefWidth="340.0" promptText="phone">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>

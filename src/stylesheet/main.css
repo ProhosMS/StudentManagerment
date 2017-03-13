@@ -1,0 +1,16 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.button-md-blue{
+    -fx-background-color:  #03A9F4;
+    -fx-text-fill: white;
+    
+}
+.button-md-white-blue{
+    -fx-background-color:  white;
+    -fx-text-fill: #03A9F4;
+}

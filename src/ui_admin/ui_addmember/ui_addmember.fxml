@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPaneAddMember" prefHeight="600.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui_admin.ui_addmember.AddMemberController">
+   <children>
+      <Label contentDisplay="TOP" layoutX="315.0" layoutY="14.0" prefHeight="193.0" prefWidth="171.0" text="Add Member" textAlignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="202.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icon/Add%20user.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtEmail" focusColor="#03a9f4" labelFloat="true" layoutX="241.0" layoutY="244.0" maxWidth="320.0" minWidth="320.0" prefHeight="45.0" prefWidth="320.0" promptText="Email">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txtPassword" focusColor="#03a9f4" labelFloat="true" layoutX="241.0" layoutY="330.0" maxWidth="320.0" minWidth="294.0" prefHeight="45.0" prefWidth="320.0" promptText="Password">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXPasswordField fx:id="txtRePassword" focusColor="#03a9f4" labelFloat="true" layoutX="241.0" layoutY="423.0" maxWidth="320.0" minWidth="294.0" prefHeight="45.0" prefWidth="320.0" promptText="Re-password">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton fx:id="btnRegister" buttonType="RAISED" layoutX="249.0" layoutY="510.0" onAction="#ClickRegister" prefHeight="39.0" prefWidth="320.0" styleClass="button-md-blue" stylesheets="@../../stylesheet/main.css" text="Register">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui_admin.ui_managestudent.ManageStudentController">
+   <children>
+      <Label contentDisplay="TOP" layoutX="798.0" layoutY="14.0" prefHeight="193.0" prefWidth="221.0" text="Manage Student" textAlignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="202.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icon/manage.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableView" layoutX="7.0" layoutY="14.0" prefHeight="778.0" prefWidth="701.0">
+         <columns>
+            <TableColumn fx:id="colID" prefWidth="98.0" text="ID" />
+            <TableColumn fx:id="colName" prefWidth="160.0" text="Name" />
+            <TableColumn fx:id="colGender" prefWidth="77.0" text="Gender" />
+            <TableColumn fx:id="colSubject" prefWidth="188.0" text="Subject" />
+            <TableColumn fx:id="colEmail" prefWidth="69.0" text="Email" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                  <MenuItem fx:id="menuAddStudent" mnemonicParsing="false" onAction="#clickMenuAddStudent" text="Add New Student">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icon/pencil.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="menuRefresh" mnemonicParsing="false" onAction="#clickMenuRefresh" text="Refresh">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icon/refresh.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="F5" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="menuDelete" disable="true" mnemonicParsing="false" onAction="#clickMenuDelete" text="Delete">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icon/delete.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="DELETE" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <JFXTextField fx:id="txtID" editable="false" focusColor="#03a9f4" labelFloat="true" layoutX="763.0" layoutY="247.0" maxWidth="292.0" minWidth="234.0" prefHeight="37.0" prefWidth="292.0" promptText="ID" />
+      <JFXTextField fx:id="txtFirstName" editable="false" focusColor="#03a9f4" labelFloat="true" layoutX="763.0" layoutY="318.0" maxWidth="292.0" minWidth="234.0" prefHeight="37.0" prefWidth="292.0" promptText="First Name" />
+      <JFXTextField fx:id="txtLastName" editable="false" focusColor="#03a9f4" labelFloat="true" layoutX="763.0" layoutY="394.0" maxWidth="292.0" minWidth="234.0" prefHeight="37.0" prefWidth="292.0" promptText="Last Name" />
+      <JFXTextField fx:id="txtEmail" focusColor="#03a9f4" labelFloat="true" layoutX="763.0" layoutY="626.0" maxWidth="292.0" minWidth="234.0" prefHeight="37.0" prefWidth="292.0" promptText="Email" />
+      <JFXButton fx:id="btnSave" buttonType="RAISED" disable="true" layoutX="763.0" layoutY="718.0" onAction="#clickSave" prefHeight="31.0" prefWidth="292.0" styleClass="button-md-blue" stylesheets="@../../stylesheet/main.css" text="Save">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+         <tooltip>
+            <Tooltip text="Register or Save changed Student" />
+         </tooltip>
+      </JFXButton>
+      <JFXComboBox fx:id="cbSubject" layoutX="770.0" layoutY="542.0" prefHeight="31.0" prefWidth="276.0" promptText="Subject" />
+      <JFXComboBox fx:id="cbGender" layoutX="771.0" layoutY="468.0" prefHeight="31.0" prefWidth="276.0" promptText="Gender" />
+      <Hyperlink fx:id="btnCancel" disable="true" layoutX="882.0" layoutY="761.0" onAction="#clickCancel" text="Cancel">
+         <tooltip>
+            <Tooltip text="Cancel current action (add student)" />
+         </tooltip>
+      </Hyperlink>
+   </children>
+</AnchorPane>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui_about.AboutDevController">
+   <children>
+      <Label contentDisplay="TOP" layoutX="389.0" layoutY="14.0" text="About Me" textAlignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="192.0" fitWidth="223.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/immortals-2.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="TOP" layoutX="373.0" layoutY="232.0" text="Name: Som Rithprohos" textAlignment="CENTER">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="TOP" layoutX="448.0" layoutY="306.0" text="Facebook" textAlignment="CENTER">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="TOP" layoutX="462.0" layoutY="421.0" text="GitHub" textAlignment="CENTER">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="TOP" layoutX="470.0" layoutY="639.0" text="Email" textAlignment="CENTER">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Hyperlink fx:id="facebookbtn" layoutX="442.0" layoutY="361.0" onAction="#clickFacebook" text="Rithprohos Som">
+         <tooltip>
+            <Tooltip text="Click to open facebook" />
+         </tooltip>
+      </Hyperlink>
+      <Hyperlink fx:id="GitHubBtn" layoutX="459.0" layoutY="479.0" onAction="#clickGitHub" text="Prohos MS" />
+      <Label contentDisplay="TOP" layoutX="454.0" layoutY="539.0" text="LinkedIn" textAlignment="CENTER">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Hyperlink fx:id="LinkedinBtn" layoutX="483.0" layoutY="591.0" onAction="#clickLinkedIn" text="Link" />
+      <Label layoutX="410.0" layoutY="689.0" text="prohossomrith@gmail.com" />
+      <Label layoutX="410.0" layoutY="720.0" text="prohossomrith@icloud.com" />
+      <Label layoutX="403.0" layoutY="749.0" text="prohossomrith@outlook.com" />
+   </children>
+</AnchorPane>
