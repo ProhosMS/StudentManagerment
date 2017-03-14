@@ -27,3 +27,5 @@ ControlFX - [Link Here](http://fxexperience.com/controlsfx/)
     ├── isPaid
 
 ```
+## Slide
+Google Slide - [Link Here](https://docs.google.com/presentation/d/16oITopAKcb3F20yG9zDH8s41OwZk7wZh3okredkfOQ4/edit?usp=sharing)
