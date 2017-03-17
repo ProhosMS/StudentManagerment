@@ -97,13 +97,14 @@ public class StudentRegisterController implements Initializable {
         }catch(Exception e){e.printStackTrace(); }
        // txtPhone.getText().matches("[0]"
     }
+    //todo event phonenum
     @FXML
     void typeOfPhone(KeyEvent event) {
        //if (txtPhone.getText().equals("0")) {
-        if (txtPhone.getText().matches("[0]")){
+        if (txtPhone.getText().matches("[A-Za-z]+")){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
-            alert.setHeaderText("You can't input number 0");
+            alert.setHeaderText("You can't input character here");
             alert.showAndWait();
             txtPhone.clear();
         }
