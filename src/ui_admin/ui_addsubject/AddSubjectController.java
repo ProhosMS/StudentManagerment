@@ -2,6 +2,7 @@ package ui_admin.ui_addsubject;
 
 /**
  * Created by Prohos on 11/28/2016.
+ * A Controller for AddSubject update upject
  */
 
 import java.net.URL;
@@ -35,7 +36,7 @@ import javax.management.Notification;
 public class AddSubjectController implements Initializable {
 
 
-    ObservableList<Subject> list = FXCollections.observableArrayList();
+    private ObservableList<Subject> list = FXCollections.observableArrayList();
 
 
     @FXML
@@ -185,7 +186,6 @@ public class AddSubjectController implements Initializable {
             alert.setHeaderText("Data is duplicate");
             alert.setContentText("Subject "+txtSubName.getText() + " is already exist in database");
             alert.showAndWait();
-            txtSubName.setText("");
             txtSubName.requestFocus();
         }
     }
@@ -214,7 +214,7 @@ public class AddSubjectController implements Initializable {
                     alert.setHeaderText("Data is duplicate");
                     alert.setContentText("Subject "+txtSubName.getText() + " is already exist in database");
                     alert.showAndWait();
-            txtSubName.setText("");
+            txtSubName.clear();
             txtSubName.requestFocus();
         }
     }
