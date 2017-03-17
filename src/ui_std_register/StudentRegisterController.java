@@ -153,15 +153,13 @@ public class StudentRegisterController implements Initializable {
                                 +"std_gender,"
                                 +"std_sub_id,"
                                 +"std_email,"
-                                +"std_phone,"
-                                +"std_password) VALUES (?,?,?,?,?,?)";
+                                +"std_password) VALUES (?,?,?,?,?)";
             PreparedStatement statement = con.prepareStatement(sql_insert);
             statement.setString(1,fullName);
             statement.setString(2,cbGender.getValue());
             statement.setInt(3,getSubID(cbSubject.getValue()));
             statement.setString(4,txtEmail.getText());
-            statement.setString(5,"+855"+txtPhone.getText());
-            statement.setString(6,txtPassword.getText());
+            statement.setString(5,txtPassword.getText());
 
             if (statement.executeUpdate() > 0){
                 Notifications.create()
